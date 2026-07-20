@@ -32,13 +32,13 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: kirin-properties/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci --prefix ./kirin-properties
+        run: npm ci
 
       - name: Build site
-        run: npm run build --prefix ./kirin-properties
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./kirin-properties/dist
+          path: ./dist
 
   deploy:
     needs: build
