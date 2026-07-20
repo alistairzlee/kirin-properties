@@ -1,0 +1,10 @@
+{
+  "name": "kirin-properties-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ./kirin-properties run dev",
+    "build": "npm --prefix ./kirin-properties run build",
+    "lint": "npm --prefix ./kirin-properties run lint",
+    "preview": "npm --prefix ./kirin-properties run preview"
+  }
+}
